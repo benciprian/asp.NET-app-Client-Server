@@ -1,0 +1,393 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:tns="http://tempuri.org/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/">
+      <s:element name="AdaugareClienti">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="Id_Client" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="Nume" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Prenume" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Telefon" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Email" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AdaugareClientiResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="AdaugareInspectori">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="Id_Inspector" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="Nume" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Prenume" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Specializare" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AdaugareInspectoriResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="AdaugareVehicule">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="id_Vehicul" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="Marca" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Model" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="AnFabricatie" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="NumarInmatriculare" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AdaugareVehiculeResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="AdaugareProgramare">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="Id_Programare" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="DataProgramare" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="OraProgramare" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="id_Vehicul" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Id_Client" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Id_Inspector" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AdaugareProgramareResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="AdaugareRezultateInspectii">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="Id_Inspectie" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="Status" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Observatii" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Id_Programare" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AdaugareRezultateInspectiiResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="StergereProgramare">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="Id_Programare" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="StergereProgramareResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="StergereRezultateInspectii">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="Id_Inspectie" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="StergereRezultateInspectiiResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="ModificareProgramare">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="Id_Programare" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="DataProgramare" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="OraProgramare" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="id_Vehicul" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="Id_Client" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="Id_Inspector" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ModificareProgramareResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="ModificareClienti">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="Id_Client" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="Nume" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Prenume" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Telefon" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Email" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ModificareClientiResponse">
+        <s:complexType />
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="AdaugareClientiSoapIn">
+    <wsdl:part name="parameters" element="tns:AdaugareClienti" />
+  </wsdl:message>
+  <wsdl:message name="AdaugareClientiSoapOut">
+    <wsdl:part name="parameters" element="tns:AdaugareClientiResponse" />
+  </wsdl:message>
+  <wsdl:message name="AdaugareInspectoriSoapIn">
+    <wsdl:part name="parameters" element="tns:AdaugareInspectori" />
+  </wsdl:message>
+  <wsdl:message name="AdaugareInspectoriSoapOut">
+    <wsdl:part name="parameters" element="tns:AdaugareInspectoriResponse" />
+  </wsdl:message>
+  <wsdl:message name="AdaugareVehiculeSoapIn">
+    <wsdl:part name="parameters" element="tns:AdaugareVehicule" />
+  </wsdl:message>
+  <wsdl:message name="AdaugareVehiculeSoapOut">
+    <wsdl:part name="parameters" element="tns:AdaugareVehiculeResponse" />
+  </wsdl:message>
+  <wsdl:message name="AdaugareProgramareSoapIn">
+    <wsdl:part name="parameters" element="tns:AdaugareProgramare" />
+  </wsdl:message>
+  <wsdl:message name="AdaugareProgramareSoapOut">
+    <wsdl:part name="parameters" element="tns:AdaugareProgramareResponse" />
+  </wsdl:message>
+  <wsdl:message name="AdaugareRezultateInspectiiSoapIn">
+    <wsdl:part name="parameters" element="tns:AdaugareRezultateInspectii" />
+  </wsdl:message>
+  <wsdl:message name="AdaugareRezultateInspectiiSoapOut">
+    <wsdl:part name="parameters" element="tns:AdaugareRezultateInspectiiResponse" />
+  </wsdl:message>
+  <wsdl:message name="StergereProgramareSoapIn">
+    <wsdl:part name="parameters" element="tns:StergereProgramare" />
+  </wsdl:message>
+  <wsdl:message name="StergereProgramareSoapOut">
+    <wsdl:part name="parameters" element="tns:StergereProgramareResponse" />
+  </wsdl:message>
+  <wsdl:message name="StergereRezultateInspectiiSoapIn">
+    <wsdl:part name="parameters" element="tns:StergereRezultateInspectii" />
+  </wsdl:message>
+  <wsdl:message name="StergereRezultateInspectiiSoapOut">
+    <wsdl:part name="parameters" element="tns:StergereRezultateInspectiiResponse" />
+  </wsdl:message>
+  <wsdl:message name="ModificareProgramareSoapIn">
+    <wsdl:part name="parameters" element="tns:ModificareProgramare" />
+  </wsdl:message>
+  <wsdl:message name="ModificareProgramareSoapOut">
+    <wsdl:part name="parameters" element="tns:ModificareProgramareResponse" />
+  </wsdl:message>
+  <wsdl:message name="ModificareClientiSoapIn">
+    <wsdl:part name="parameters" element="tns:ModificareClienti" />
+  </wsdl:message>
+  <wsdl:message name="ModificareClientiSoapOut">
+    <wsdl:part name="parameters" element="tns:ModificareClientiResponse" />
+  </wsdl:message>
+  <wsdl:portType name="WebService1Soap">
+    <wsdl:operation name="AdaugareClienti">
+      <wsdl:input message="tns:AdaugareClientiSoapIn" />
+      <wsdl:output message="tns:AdaugareClientiSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="AdaugareInspectori">
+      <wsdl:input message="tns:AdaugareInspectoriSoapIn" />
+      <wsdl:output message="tns:AdaugareInspectoriSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="AdaugareVehicule">
+      <wsdl:input message="tns:AdaugareVehiculeSoapIn" />
+      <wsdl:output message="tns:AdaugareVehiculeSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="AdaugareProgramare">
+      <wsdl:input message="tns:AdaugareProgramareSoapIn" />
+      <wsdl:output message="tns:AdaugareProgramareSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="AdaugareRezultateInspectii">
+      <wsdl:input message="tns:AdaugareRezultateInspectiiSoapIn" />
+      <wsdl:output message="tns:AdaugareRezultateInspectiiSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="StergereProgramare">
+      <wsdl:input message="tns:StergereProgramareSoapIn" />
+      <wsdl:output message="tns:StergereProgramareSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="StergereRezultateInspectii">
+      <wsdl:input message="tns:StergereRezultateInspectiiSoapIn" />
+      <wsdl:output message="tns:StergereRezultateInspectiiSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ModificareProgramare">
+      <wsdl:input message="tns:ModificareProgramareSoapIn" />
+      <wsdl:output message="tns:ModificareProgramareSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ModificareClienti">
+      <wsdl:input message="tns:ModificareClientiSoapIn" />
+      <wsdl:output message="tns:ModificareClientiSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="WebService1Soap" type="tns:WebService1Soap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="AdaugareClienti">
+      <soap:operation soapAction="http://tempuri.org/AdaugareClienti" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AdaugareInspectori">
+      <soap:operation soapAction="http://tempuri.org/AdaugareInspectori" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AdaugareVehicule">
+      <soap:operation soapAction="http://tempuri.org/AdaugareVehicule" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AdaugareProgramare">
+      <soap:operation soapAction="http://tempuri.org/AdaugareProgramare" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AdaugareRezultateInspectii">
+      <soap:operation soapAction="http://tempuri.org/AdaugareRezultateInspectii" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="StergereProgramare">
+      <soap:operation soapAction="http://tempuri.org/StergereProgramare" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="StergereRezultateInspectii">
+      <soap:operation soapAction="http://tempuri.org/StergereRezultateInspectii" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ModificareProgramare">
+      <soap:operation soapAction="http://tempuri.org/ModificareProgramare" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ModificareClienti">
+      <soap:operation soapAction="http://tempuri.org/ModificareClienti" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="WebService1Soap12" type="tns:WebService1Soap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="AdaugareClienti">
+      <soap12:operation soapAction="http://tempuri.org/AdaugareClienti" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AdaugareInspectori">
+      <soap12:operation soapAction="http://tempuri.org/AdaugareInspectori" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AdaugareVehicule">
+      <soap12:operation soapAction="http://tempuri.org/AdaugareVehicule" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AdaugareProgramare">
+      <soap12:operation soapAction="http://tempuri.org/AdaugareProgramare" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AdaugareRezultateInspectii">
+      <soap12:operation soapAction="http://tempuri.org/AdaugareRezultateInspectii" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="StergereProgramare">
+      <soap12:operation soapAction="http://tempuri.org/StergereProgramare" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="StergereRezultateInspectii">
+      <soap12:operation soapAction="http://tempuri.org/StergereRezultateInspectii" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ModificareProgramare">
+      <soap12:operation soapAction="http://tempuri.org/ModificareProgramare" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ModificareClienti">
+      <soap12:operation soapAction="http://tempuri.org/ModificareClienti" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="WebService1">
+    <wsdl:port name="WebService1Soap" binding="tns:WebService1Soap">
+      <soap:address location="https://localhost:44319/WebService1.asmx" />
+    </wsdl:port>
+    <wsdl:port name="WebService1Soap12" binding="tns:WebService1Soap12">
+      <soap12:address location="https://localhost:44319/WebService1.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

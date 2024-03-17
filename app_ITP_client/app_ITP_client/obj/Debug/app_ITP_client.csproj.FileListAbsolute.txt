@@ -1,0 +1,16 @@
+C:\Users\benfl\OneDrive\Desktop\programare avansata\app_ITP_client\app_ITP_client\bin\Debug\app_ITP_client.exe.config
+C:\Users\benfl\OneDrive\Desktop\programare avansata\app_ITP_client\app_ITP_client\bin\Debug\app_ITP_client.exe
+C:\Users\benfl\OneDrive\Desktop\programare avansata\app_ITP_client\app_ITP_client\bin\Debug\app_ITP_client.pdb
+C:\Users\benfl\OneDrive\Desktop\programare avansata\app_ITP_client\app_ITP_client\obj\Debug\app_ITP_client.csproj.AssemblyReference.cache
+C:\Users\benfl\OneDrive\Desktop\programare avansata\app_ITP_client\app_ITP_client\obj\Debug\app_ITP_client.Form1.resources
+C:\Users\benfl\OneDrive\Desktop\programare avansata\app_ITP_client\app_ITP_client\obj\Debug\app_ITP_client.Properties.Resources.resources
+C:\Users\benfl\OneDrive\Desktop\programare avansata\app_ITP_client\app_ITP_client\obj\Debug\app_ITP_client.csproj.GenerateResource.cache
+C:\Users\benfl\OneDrive\Desktop\programare avansata\app_ITP_client\app_ITP_client\obj\Debug\app_ITP_client.csproj.CoreCompileInputs.cache
+C:\Users\benfl\OneDrive\Desktop\programare avansata\app_ITP_client\app_ITP_client\obj\Debug\app_ITP_client.exe
+C:\Users\benfl\OneDrive\Desktop\programare avansata\app_ITP_client\app_ITP_client\obj\Debug\app_ITP_client.pdb
+C:\Users\benfl\OneDrive\Desktop\programare avansata\app_ITP_client\app_ITP_client\obj\Debug\app_ITP_client.Adaugare_Client.resources
+C:\Users\benfl\OneDrive\Desktop\programare avansata\app_ITP_client\app_ITP_client\obj\Debug\app_ITP_client.Adaugare_Inspector.resources
+C:\Users\benfl\OneDrive\Desktop\programare avansata\app_ITP_client\app_ITP_client\obj\Debug\app_ITP_client.Adaugare_Vehicul.resources
+C:\Users\benfl\OneDrive\Desktop\programare avansata\app_ITP_client\app_ITP_client\obj\Debug\app_ITP_client.Adaugare_Programare.resources
+C:\Users\benfl\OneDrive\Desktop\programare avansata\app_ITP_client\app_ITP_client\obj\Debug\app_ITP_client.Finalizare_Programare.resources
+C:\Users\benfl\OneDrive\Desktop\programare avansata\app_ITP_client\app_ITP_client\obj\Debug\app_ITP_client.Adaugare_Rezultat_InspectieITP.resources

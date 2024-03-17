@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.7.34221.43
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "app_ITP_client", "app_ITP_client\app_ITP_client.csproj", "{21EC5BE8-2038-469D-9B77-33369C2B0D7C}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{21EC5BE8-2038-469D-9B77-33369C2B0D7C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{21EC5BE8-2038-469D-9B77-33369C2B0D7C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{21EC5BE8-2038-469D-9B77-33369C2B0D7C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{21EC5BE8-2038-469D-9B77-33369C2B0D7C}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {E0ECA54A-3C3D-4C5B-BE24-11CA043DE7F2}
+	EndGlobalSection
+EndGlobal
